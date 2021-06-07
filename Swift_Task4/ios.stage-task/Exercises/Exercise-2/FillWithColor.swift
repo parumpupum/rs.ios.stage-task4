@@ -7,6 +7,10 @@ final class FillWithColor {
         let rows = image.count
         let columns = image[0].count
         
+        if (row < 0 || row >= rows || column < 0 || column >= columns) {
+            return image
+        }
+        
         var result = image
         
         var visited: [[Bool]] = [[]]
